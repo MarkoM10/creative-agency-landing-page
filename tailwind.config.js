@@ -36,6 +36,9 @@ module.exports = {
         sectionOne: "url('/assets/image-strategic.jpg')",
         heroMobile: "url('/assets/hero-mobile.jpg')",
       },
+      spacing: {
+        left20: "20%",
+      },
     },
   },
   plugins: [],
