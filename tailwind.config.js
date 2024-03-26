@@ -37,7 +37,7 @@ module.exports = {
         heroMobile: "url('/assets/hero-mobile.jpg')",
       },
       spacing: {
-        left20: "20%",
+        left15: "17%",
       },
     },
   },
