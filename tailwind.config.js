@@ -36,8 +36,21 @@ module.exports = {
         sectionOne: "url('/assets/image-strategic.jpg')",
         heroMobile: "url('/assets/hero-mobile.jpg')",
       },
+      width: {
+        width65: "65%",
+      },
+      height: {
+        height65: "65rem",
+      },
+      maxWidth: {
+        xl8: "1440px",
+      },
+      margin: {
+        negative25: "-25%",
+      },
       spacing: {
-        left15: "17%",
+        negativeLeft: "-3%",
+        top15: "20%",
       },
     },
   },

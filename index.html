@@ -10,20 +10,22 @@
       href="https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
     <title>Creative agency</title>
     <script src="script.js"></script>
   </head>
   <body>
     <!--Landing page wrapper-->
-    <div class="lPageWrapper">
-      <section class="flex justify-end">
-        <div class="w-full max-w-7xl">
+    <div class="landingPageWrapper">
+      <!-- Start of the hero section -->
+      <section class="heroSection flex justify-end">
+        <div class="w-full max-w-xl8">
           <!-- Start of header -->
           <header class="h-44 w-full">
             <nav
               class="grid grid-cols-2 px-8 lg:px-0 lg:grid-cols-[25%_75%] h-full items-center w-full"
             >
-              <div class="flex lg:justify-start xl:pl-0">
+              <div class="flex lg:justify-start lg:pl-8 xxl:pl-0">
                 <img src="assets/logo.svg" alt="Logo" />
               </div>
               <div
@@ -77,10 +79,10 @@
               />
             </div>
             <div
-              class="flex flex-col px-8 gap-6 mt-8 sm:mt-0 sm:gap-12 sm:absolute top-1/4"
+              class="flex flex-col px-8 gap-6 mt-8 sm:mt-0 sm:gap-12 sm:absolute xxl:px-0 top-top15 xl:top-1/4"
             >
               <div>
-                <h1 class="text-2xl sm:text-7xl font-extrabold">
+                <h1 class="text-4xl sm:text-7xl font-extrabold">
                   Branding & <br />
                   website design <br />
                   agency
@@ -107,15 +109,15 @@
         </div>
       </section>
       <!-- End of hero section -->
-      <!-- Start of first section -->
-      <section class="grid sm:grid-cols-2 relative">
-        <div>
+      <!-- Start of first section  -->
+      <section class="firstSection grid sm:grid-cols-2">
+        <div class="sm:h-5/6">
           <img
-            class="object-cover w-full hidden sm:block"
+            class="h-full w-full hidden sm:block"
             src="./assets/image-strategic.jpg"
           />
           <img
-            class="object-cover w-full block sm:hidden"
+            class="h-full w-full block sm:hidden"
             src="./assets/strategic-mobile.jpg"
           />
         </div>
@@ -123,7 +125,7 @@
           class="flex justify-start sm:justify-center pt-0 sm:pt-24 bg-dark-400"
         >
           <div
-            class="flex flex-col justify-center px-8 py-16 sm:px-0 sm:py-0 gap-4 lg:gap-10 w-full sm:w-3/4 lg:w-1/2 sm:h-1/2"
+            class="flex flex-col justify-center px-8 py-20 sm:px-0 sm:py-0 gap-4 lg:gap-10 w-full sm:w-3/4 lg:w-1/2 sm:h-1/2"
           >
             <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-white">
               <span class="text-pink-400">Design </span>is strategic.
@@ -142,70 +144,130 @@
         <!-- <div class="absolute top-1/2 left-1/2">
           <img src="./assets/bg-pattern-wave-red.svg" />
         </div> -->
-        <!-- Start of second section  -->
-        <section
-          class="grid sm:grid-cols-[35%_65%] static sm:absolute w-full top-3/4"
-        >
-          <div>
-            <div
-              class="px-8 pt-8 sm:px-0 sm:pt-0 top-1/2 left-left15 static bg-pink-400 sm:bg-inherit sm:absolute w-full sm:w-1/4"
+      </section>
+      <!-- End of first section  -->
+      <!-- Start of second section  -->
+      <section
+        class="secondSection sm:mt-negative25 grid sm:grid-cols-[35%_65%] w-full top-3/4 overflow-x-hidden relative"
+      >
+        <div class="relative">
+          <div
+            class="sm:absolute top-1/2 left-1/4 lg:left-1/2 px-8 pt-8 sm:px-0 sm:pt-0 bg-pink-400 sm:bg-inherit w-full xl:w-3/4"
+          >
+            <label
+              class="text-3xl sm:text-5xl text-white sm:text-dark-400 font-extrabold font-commisioner"
+              >Our approach for creating a winning brand</label
             >
+          </div>
+        </div>
+        <div class="flex flex-col justify-around items-center bg-pink-400">
+          <div
+            class="w-full px-8 sm:px-0 sm:w-1/2 flex flex-col gap-16 py-12 sm:py-48"
+          >
+            <div class="flex flex-col gap-2">
               <label
-                class="text-3xl sm:text-5xl text-white sm:text-dark-400 font-extrabold font-commisioner"
-                >Our approach for creating a winning brand</label
+                class="text-6xl font-commisioner font-extrabold text-pink-900"
+                >01</label
+              >
+              <label class="text-white text-2xl font-extrabold"
+                >Brand Strategy</label
+              >
+              <label class="text-white"
+                >Brand strategy is critical for long-term success. Outshining
+                competitors and capturing the target audience are key.</label
+              >
+            </div>
+            <div class="flex flex-col gap-2">
+              <label
+                class="text-6xl font-commisioner font-extrabold text-pink-900"
+                >02</label
+              >
+              <label class="text-white text-2xl font-extrabold"
+                >Brand Design</label
+              >
+              <label class="text-white"
+                >Keeping the brand design unique and meaningful helps in
+                communicating the brand’s timeless value effectively.</label
+              >
+            </div>
+            <div class="flex flex-col gap-2">
+              <label
+                class="text-6xl font-commisioner font-extrabold text-pink-900"
+                >03</label
+              >
+              <label class="text-white text-2xl font-extrabold"
+                >Web Design</label
+              >
+              <label class="text-white"
+                >A beautifully crafted website is the best tool for brand
+                awareness, and ultimately results in increased revenues.</label
               >
             </div>
           </div>
-          <div class="flex flex-col justify-around items-center bg-pink-400">
-            <div
-              class="w-full px-8 sm:px-0 sm:w-1/2 flex flex-col gap-16 py-12 sm:py-48"
-            >
-              <div class="flex flex-col gap-2">
-                <label
-                  class="text-6xl font-commisioner font-extrabold text-pink-900"
-                  >01</label
-                >
-                <label class="text-white text-2xl font-extrabold"
-                  >Brand Strategy</label
-                >
-                <label class="text-white"
-                  >Brand strategy is critical for long-term success. Outshining
-                  competitors and capturing the target audience are key.</label
-                >
-              </div>
-              <div class="flex flex-col gap-2">
-                <label
-                  class="text-6xl font-commisioner font-extrabold text-pink-900"
-                  >02</label
-                >
-                <label class="text-white text-2xl font-extrabold"
-                  >Brand Design</label
-                >
-                <label class="text-white"
-                  >Keeping the brand design unique and meaningful helps in
-                  communicating the brand’s timeless value effectively.</label
-                >
-              </div>
-              <div class="flex flex-col gap-2">
-                <label
-                  class="text-6xl font-commisioner font-extrabold text-pink-900"
-                  >03</label
-                >
-                <label class="text-white text-2xl font-extrabold"
-                  >Web Design</label
-                >
-                <label class="text-white"
-                  >A beautifully crafted website is the best tool for brand
-                  awareness, and ultimately results in increased
-                  revenues.</label
-                >
+        </div>
+      </section>
+      <!-- End of second section  -->
+      <!-- Start of third section  -->
+      <section
+        class="thirdSection flex flex-col-reverse sm:flex-row justify-end relative"
+      >
+        <div class="z-10 sm:absolute left-0 sm:w-1/2 h-3/4">
+          <div
+            class="bg-dark-400 py-20 lg:py-40 flex justify-center items-center px-8 sm:px-0 h-full"
+          >
+            <div class="w-full sm:w-3/4 lg:w-1/2 flex flex-col gap-8">
+              <label class="text-4xl lg:text-5xl font-extrabold text-white"
+                >Brand naming & guidelines</label
+              >
+              <div class="flex gap-4">
+                <img
+                  class="cursor-pointer"
+                  src="./assets/icon-arrow-previous.svg"
+                />
+                <img
+                  class="cursor-pointer"
+                  src="./assets/icon-arrow-next.svg"
+                />
               </div>
             </div>
           </div>
-        </section>
-        <!-- End of second section  -->
+        </div>
+        <div class="sm:w-width65">
+          <img src="./assets/image-slide-1.jpg" class="w-full" />
+          <div class="absolute bottom-20 right-10 sm:right-40">
+            <div class="flex flex-col">
+              <label
+                class="block font-commisioner text-2xl text-white font-bold"
+                >Lean Product Roadmap</label
+              >
+              <label class="text-end text-white">2019 Project</label>
+            </div>
+          </div>
+        </div>
       </section>
-      <!-- End of first section  -->
+      <!-- End of third section  -->
+      <!-- Start of footer  -->
+      <footer class="lg:flex items-center py-20 relative">
+        <div class="hidden lg:block absolute left-negativeLeft">
+          <img src="./assets/bg-pattern-wave-red.svg" />
+        </div>
+        <div class="px-8 pt-8 lg:px-0 lg:pt-0 lg:ml-40">
+          <label
+            class="text-3xl sm:text-5xl text-dark-400 font-extrabold font-commisioner"
+            >Let's build something <br />great together.</label
+          >
+        </div>
+        <div
+          class="pl-8 pt-8 lg:pt-0 lg:pl-0 lg:absolute bottom-20 right-10 sm:right-40"
+        >
+          <button
+            class="bg-pink-400 hover:bg-pink-500 transition ease-in-out duration-300 px-11 py-5 text-base text-white font-bold"
+          >
+            Schedule a Call
+          </button>
+        </div>
+      </footer>
+      <!-- End of footer  -->
     </div>
   </body>
 </html>
