@@ -18,7 +18,7 @@
     <!--Landing page wrapper-->
     <div class="landingPageWrapper">
       <!-- Start of the hero section -->
-      <section class="heroSection flex justify-end">
+      <section class="heroSection flex justify-end relative">
         <div class="w-full max-w-xl8">
           <!-- Start of header -->
           <header class="h-44 w-full">
@@ -47,22 +47,37 @@
                 </ul>
               </div>
               <div
-                class="mobileMenu flex lg:hidden h-full items-center justify-end"
+                class="mobileIcons flex lg:hidden h-full items-center justify-end"
               >
                 <svg
-                  class="w-6 h-6"
-                  style="color: #75757a"
-                  aria-hidden="true"
+                  id="mobileMenuIcon"
                   xmlns="http://www.w3.org/2000/svg"
                   fill="none"
-                  viewBox="0 0 17 14"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-8 h-8"
                 >
                   <path
-                    stroke="currentColor"
                     stroke-linecap="round"
                     stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M1 1h15M1 7h15M1 13h15"
+                    d="M3.75 6.75h16.5M3.75 12h16.5M12 17.25h8.25"
+                  />
+                </svg>
+
+                <svg
+                  id="closeIcon"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="w-8 h-8 hidden"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M6 18 18 6M6 6l12 12"
                   />
                 </svg>
               </div>
@@ -108,9 +123,45 @@
           </section>
         </div>
       </section>
+      <div class="mobileMenu hidden absolute top-32 w-full px-8">
+        <div
+          class="lg:flex bg-pink-400 h-full items-center justify-center lg:justify-normal rounded-md"
+        >
+          <ul
+            class="flex flex-col items-start gap-4 lg:gap-11 font-commisioner tracking-wide text-lg text-white px-6 py-8"
+          >
+            <li class="w-full">
+              <a
+                class="block rounded-md w-full hover:bg-pink-300 py-2 px-3"
+                href="#"
+                >About</a
+              >
+            </li>
+            <li class="w-full">
+              <a
+                class="block rounded-md w-full hover:bg-pink-300 py-2 px-3"
+                href="#"
+                >Service</a
+              >
+            </li>
+            <li class="w-full">
+              <a
+                class="block rounded-md w-full hover:bg-pink-300 py-2 px-3"
+                href="#"
+                >Projects</a
+              >
+            </li>
+            <button
+              class="w-full bg-dark-400 hover:bg-dark-500 transition ease-in-out duration-300 px-11 py-5 text-base text-white font-bold"
+            >
+              Schedule a Call
+            </button>
+          </ul>
+        </div>
+      </div>
       <!-- End of hero section -->
       <!-- Start of first section  -->
-      <section class="firstSection grid sm:grid-cols-2">
+      <section class="firstSection grid sm:grid-cols-2 relative">
         <div class="sm:h-5/6">
           <img
             class="h-full w-full hidden sm:block"
@@ -122,28 +173,40 @@
           />
         </div>
         <div
-          class="flex justify-start sm:justify-center pt-0 sm:pt-24 bg-dark-400"
+          class="flex justify-start sm:justify-center pt-0 sm:pt-8 lg:pt-14 xl:pt-24 bg-dark-400"
         >
           <div
-            class="flex flex-col justify-center px-8 py-20 sm:px-0 sm:py-0 gap-4 lg:gap-10 w-full sm:w-3/4 lg:w-1/2 sm:h-1/2"
+            class="flex flex-col justify-center px-8 py-20 sm:px-0 sm:py-0 gap-4 lg:gap-10 sm:h-1/2"
           >
-            <h1 class="text-3xl sm:text-4xl lg:text-6xl font-bold text-white">
-              <span class="text-pink-400">Design </span>is strategic.
-            </h1>
-            <p class="text-white">
-              “A well-crafted design strategy consistently produces desired
-              outcomes and brand awareness. We are firm believers that success
-              lies in creative collaboration with our clients.”
-            </p>
-            <label
-              class="underline underline-offset-8 text-pink-400 font-bold cursor-pointer"
-              >Schedule a Call</label
-            >
+            <div class="flex items-center justify-center">
+              <div
+                class="hidden xl:flex absolute items-center left-left46 w-20 h-20 lg:w-auto"
+              >
+                <img src="./assets/bg-pattern-wave-red.svg" />
+              </div>
+              <h1
+                class="w-full sm:w-3/4 lg:w-1/2 text-3xl sm:text-4xl lg:text-6xl font-bold text-white"
+              >
+                <span class="text-pink-400">Design </span>is strategic.
+              </h1>
+            </div>
+            <div class="flex items-center justify-center">
+              <div
+                class="w-full sm:w-3/4 lg:w-1/2 flex flex-col gap-4 lg:gap-8"
+              >
+                <p class="text-white">
+                  “A well-crafted design strategy consistently produces desired
+                  outcomes and brand awareness. We are firm believers that
+                  success lies in creative collaboration with our clients.”
+                </p>
+                <label
+                  class="underline underline-offset-8 text-pink-400 font-bold cursor-pointer"
+                  >Schedule a Call</label
+                >
+              </div>
+            </div>
           </div>
         </div>
-        <!-- <div class="absolute top-1/2 left-1/2">
-          <img src="./assets/bg-pattern-wave-red.svg" />
-        </div> -->
       </section>
       <!-- End of first section  -->
       <!-- Start of second section  -->
@@ -216,15 +279,24 @@
             class="bg-dark-400 py-20 lg:py-40 flex justify-center items-center px-8 sm:px-0 h-full"
           >
             <div class="w-full sm:w-3/4 lg:w-1/2 flex flex-col gap-8">
-              <label class="text-4xl lg:text-5xl font-extrabold text-white"
-                >Brand naming & guidelines</label
-              >
+              <div class="flex items-center">
+                <label
+                  id="title"
+                  class="text-4xl lg:text-5xl font-extrabold text-white"
+                  >Brand naming & guidelines</label
+                >
+                <div class="hidden xl:block absolute right-negativeRight">
+                  <img src="./assets/bg-pattern-wavy-white.svg" />
+                </div>
+              </div>
               <div class="flex gap-4">
                 <img
+                  id="prevButton"
                   class="cursor-pointer"
                   src="./assets/icon-arrow-previous.svg"
                 />
                 <img
+                  id="nextButton"
                   class="cursor-pointer"
                   src="./assets/icon-arrow-next.svg"
                 />
@@ -233,14 +305,27 @@
           </div>
         </div>
         <div class="sm:w-width65">
-          <img src="./assets/image-slide-1.jpg" class="w-full" />
-          <div class="absolute bottom-20 right-10 sm:right-40">
+          <img id="image1" src="./assets/image-slide-1.jpg" class="w-full" />
+          <img
+            id="image2"
+            src="./assets/image-slide-2.jpg"
+            class="w-full hidden"
+          />
+          <img
+            id="image3"
+            src="./assets/image-slide-3.jpg"
+            class="w-full hidden"
+          />
+          <div class="absolute bottom-80 sm:bottom-20 right-10 xl:right-40">
             <div class="flex flex-col">
               <label
+                id="imageTitle"
                 class="block font-commisioner text-2xl text-white font-bold"
                 >Lean Product Roadmap</label
               >
-              <label class="text-end text-white">2019 Project</label>
+              <label id="project" class="text-end text-white"
+                >2019 Project</label
+              >
             </div>
           </div>
         </div>
@@ -248,7 +333,7 @@
       <!-- End of third section  -->
       <!-- Start of footer  -->
       <footer class="lg:flex items-center py-20 relative">
-        <div class="hidden lg:block absolute left-negativeLeft">
+        <div class="hidden xl:block absolute left-negativeLeft">
           <img src="./assets/bg-pattern-wave-red.svg" />
         </div>
         <div class="px-8 pt-8 lg:px-0 lg:pt-0 lg:ml-40">
@@ -258,7 +343,7 @@
           >
         </div>
         <div
-          class="pl-8 pt-8 lg:pt-0 lg:pl-0 lg:absolute bottom-20 right-10 sm:right-40"
+          class="pl-8 pt-8 lg:pt-0 lg:pl-0 lg:absolute bottom-20 right-10 xl:right-40"
         >
           <button
             class="bg-pink-400 hover:bg-pink-500 transition ease-in-out duration-300 px-11 py-5 text-base text-white font-bold"

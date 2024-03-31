@@ -51,6 +51,8 @@ module.exports = {
       spacing: {
         negativeLeft: "-3%",
         top15: "20%",
+        left46: "47%",
+        negativeRight: "-7%",
       },
     },
   },
