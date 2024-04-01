@@ -18,7 +18,7 @@
     <!--Landing page wrapper-->
     <div class="landingPageWrapper">
       <!-- Start of the hero section -->
-      <section class="heroSection flex justify-end relative">
+      <section class="heroSection flex justify-center relative">
         <div class="w-full max-w-xl8">
           <!-- Start of header -->
           <header class="h-44 w-full">
@@ -94,7 +94,7 @@
               />
             </div>
             <div
-              class="flex flex-col px-8 gap-6 mt-8 sm:mt-0 sm:gap-12 sm:absolute xxl:px-0 top-top15 xl:top-1/4"
+              class="flex flex-col px-8 gap-6 mt-8 sm:mt-0 sm:gap-12 sm:absolute xxl:px-0 sm:top-top15 lg:top-top20 xl:top-1/4"
             >
               <div>
                 <h1 class="text-4xl sm:text-7xl font-extrabold">
@@ -305,18 +305,24 @@
           </div>
         </div>
         <div class="sm:w-width65">
-          <img id="image1" src="./assets/image-slide-1.jpg" class="w-full" />
+          <img
+            id="image1"
+            src="./assets/image-slide-1.jpg"
+            class="w-full brightness-75"
+          />
           <img
             id="image2"
             src="./assets/image-slide-2.jpg"
-            class="w-full hidden"
+            class="w-full hidden brightness-75"
           />
           <img
             id="image3"
             src="./assets/image-slide-3.jpg"
-            class="w-full hidden"
+            class="w-full hidden brightness-50"
           />
-          <div class="absolute bottom-80 sm:bottom-20 right-10 xl:right-40">
+          <div
+            class="absolute bottom-bottom85 sm:bottom-20 right-10 xl:right-40"
+          >
             <div class="flex flex-col">
               <label
                 id="imageTitle"
@@ -332,13 +338,15 @@
       </section>
       <!-- End of third section  -->
       <!-- Start of footer  -->
-      <footer class="lg:flex items-center py-20 relative">
+      <footer
+        class="sm:flex items-center justify-center lg:justify-normal py-20 relative"
+      >
         <div class="hidden xl:block absolute left-negativeLeft">
           <img src="./assets/bg-pattern-wave-red.svg" />
         </div>
         <div class="px-8 pt-8 lg:px-0 lg:pt-0 lg:ml-40">
           <label
-            class="text-3xl sm:text-5xl text-dark-400 font-extrabold font-commisioner"
+            class="text-3xl sm:text-4xl text-dark-400 font-extrabold font-commisioner"
             >Let's build something <br />great together.</label
           >
         </div>
@@ -352,6 +360,23 @@
           </button>
         </div>
       </footer>
+      <div class="w-full bg-pink-400 py-8 flex justify-center items-center">
+        <div class="flex justify-center items-center gap-2">
+          <label
+            class="text-dark-400 font-commisioner font-extrabold text-md sm:text-xl"
+            >©2024 Coded by
+            <span
+              class="hover:text-white cursor-pointer transition ease-in-out delay-150"
+              ><a href="https://github.com/MarkoM10">Marko Mitrovic</a></span
+            ></label
+          >
+          <a href="https://github.com/MarkoM10">
+            <img
+              src="./assets/mlogo.png"
+              class="w-10 sm:w-14 h-auto hover:scale-125 transition ease-in-out delay-150"
+          /></a>
+        </div>
+      </div>
       <!-- End of footer  -->
     </div>
   </body>

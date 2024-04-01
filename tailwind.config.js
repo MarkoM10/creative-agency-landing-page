@@ -50,9 +50,11 @@ module.exports = {
       },
       spacing: {
         negativeLeft: "-3%",
-        top15: "20%",
+        top20: "20%",
+        top15: "15%",
         left46: "47%",
         negativeRight: "-7%",
+        bottom85: "22rem",
       },
     },
   },

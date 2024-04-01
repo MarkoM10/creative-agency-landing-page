@@ -15,6 +15,17 @@ document.addEventListener("DOMContentLoaded", function () {
     closeIcon.classList.add("hidden");
   });
 
+  function handleResize() {
+    if (window.innerWidth > 1023) {
+      mobileMenu.classList.add("hidden");
+      mobileMenuIcon.classList.remove("hidden");
+      closeIcon.classList.add("hidden");
+    }
+  }
+  handleResize();
+
+  window.addEventListener("resize", handleResize);
+
   const title = document.getElementById("title");
   const imageTitle = document.getElementById("imageTitle");
   const project = document.getElementById("project");
@@ -26,7 +37,7 @@ document.addEventListener("DOMContentLoaded", function () {
   ];
   const labels = [
     {
-      title: "Lean Product & Roadmap",
+      title: "Brand naming & guidelines",
       imageTitle: "Lean Product Roadmap",
       project: "2019 Project",
     },
